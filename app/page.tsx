@@ -1,108 +1,20 @@
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <img
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <img
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div style={{width: '100%', height: '100%', position: 'relative', background: 'white'}}>
+      <div style={{width: 1512, height: 802, left: 0, top: 113, position: 'absolute', background: '#F8FAFC'}} />
+      <div style={{width: 1512, height: 113, left: 0, top: 0, position: 'absolute', background: '#06B6D4', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}} />
+      <img style={{width: 892.99, height: 686.75, left: 1791.06, top: 920.23, position: 'absolute', transform: 'rotate(-176.97deg)', transformOrigin: '0 0'}} src="https://raw.githubusercontent.com/france8520/IMAGE-OF-C-VOICE-01/blob/main/5c8642e13bcc738cf05fdef0f1e30978.png" />
+      <div style={{width: 1512, height: 67, left: 0, top: 915, position: 'absolute', background: '#ECFCCB'}} />
+      <div style={{width: 1442, left: 35, top: 931, position: 'absolute', textAlign: 'center', color: '#0891B2', fontSize: 27, fontFamily: 'Roboto Mono', fontWeight: '400', wordWrap: 'break-word'}}>Copyright © Kernel Knight @ToBeIT’67 The Second</div>
+      <div style={{width: 816, left: 117, top: 357, position: 'absolute', textAlign: 'center', color: '#0893B4', fontSize: 40, fontFamily: 'Roboto Mono', fontWeight: '400', wordWrap: 'break-word'}}>แปลงไฟล์เสียงของคุณเป็นข้อความที่อ่านง่าย<br/>แถมได้รับการตรวจสอบและสรุปมาแล้วกันเลย</div>
+      <div style={{width: 242, height: 46, left: 428, top: 34, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Roboto Mono', fontWeight: '700', wordWrap: 'break-word'}}>วิธีใช้งาน</div>
+      <div style={{width: 242, height: 46, left: 212, top: 34, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Roboto Mono', fontWeight: '700', wordWrap: 'break-word'}}>หน้าหลัก</div>
+      <div style={{width: 242, height: 46, left: 657, top: 34, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Roboto Mono', fontWeight: '700', wordWrap: 'break-word'}}>อัพโหลดไฟล์</div>
+      <div style={{width: 680, left: 98, top: 229, position: 'absolute', textAlign: 'center', color: '#075985', fontSize: 70, fontFamily: 'Roboto Mono', fontWeight: '700', wordWrap: 'break-word'}}>ใช้งานง่ายและฟรี !</div>
+      <div style={{width: 245, height: 85, left: 173, top: 518, position: 'absolute', background: '#FFEDD5', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', borderRadius: 10}} />
+      <div style={{width: 228, height: 48, left: 181, top: 536, position: 'absolute', textAlign: 'center', color: '#085984', fontSize: 30, fontFamily: 'Roboto Mono', fontWeight: '400', wordWrap: 'break-word'}}>เริ่มต้นใช้งาน</div>
+      <img style={{width: 170, height: 170, left: 42, top: -29, position: 'absolute'}} src="https://raw.githubusercontent.com/france8520/IMAGE-OF-C-VOICE/main/f2fa8b8988482d207e1d4af8061b0537.png" />
       </div>
     </main>
   );
