@@ -1,53 +1,12 @@
-"use client";
-import { api } from "@/utils/api";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-
-type UploadFileRequest = {
-    file: File
-}
-
-
-export default function UploadAudioFilePage() {
-    const [isSubmitting, setSubmitting] = useState(false)
-  const { register, handleSubmit } = useForm<UploadFileRequest>();
-
-  const submit = async (data: UploadFileRequest) => {
-    console.log(data)
-    setSubmitting(true);
-    try {
-        const json = await api.get("speech").json();
-        console.log("Result", json)
-    }
-    catch(err) {
-        console.error(err);
-    }
-    finally {
-        setSubmitting(false)
-    }
-
-  }
-
+export default function UploadPage() {
   return (
-    <form
-      className="p-4 flex gap-2 items-center"
-      onSubmit={handleSubmit(submit)}
-    >
-      <label htmlFor="file">Upload:</label>
-      <input
-        type="file"
-        accept="audio/*"
-        {...register("file", {
-          required: true,
-        })}
-      />
-      <button
-        type="submit"
-        className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-800  text-white px-4 py-2 rounded-lg"
-        disabled={isSubmitting}
-      >
-        Submit
-      </button>
-    </form>
+    <div className="flex flex-col flex-1 w-full items-center xl:justify-center h-full md:p-8 pb-10">
+      <div className="flex flex-col gap-8 items-center w-full max-w-2xl">
+        <h1>แปลงเสียงเป็นข้อความง่าย ๆ ได้ด้วยตัวคุณ !</h1>
+        <div className="flex w-full rounded-lg bg-gray-100 px-10 py-6 shadow-sm text-lg">
+          {/** WIP */}
+        </div>
+      </div>
+    </div>
   );
 }
