@@ -54,4 +54,115 @@ body {
   font-family: 'Roboto Mono';
   font-weight: 400;
   word-wrap: break-word;
+
+  
+}
+body {
+  font-family: 'Roboto Mono';
+  word-wrap: break-word;
+}
+
+/* Home */
+.home {
+  color: white;
+  font-size: 35px;
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+/* Upload File */
+.upload {
+  color: white;
+  font-size: 35px;
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+/* Copyright */
+.copyright {
+  color: #0891B2;
+  font-size: 27px;
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+/* Upload Sound File Here */
+.upload-sound {
+  color: #075985;
+  font-size: 64px;
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+/* Convert Sound to Text */
+.convert-sound {
+  color: #0891B2;
+  font-size: 48px;
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+body {
+  font-family: 'Roboto Mono';
+  word-wrap: break-word;
+}
+
+/* Header - How to Use */
+.header-how-to-use {
+  color: white;
+  font-size: 35px;
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+/* Header - Home */
+.header-home {
+  color: white;
+  font-size: 35px;
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+/* Header - Upload File */
+.header-upload-file {
+  color: white;
+  font-size: 35px;
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+/* Copyright */
+.copyright {
+  color: #0891B2;
+  font-size: 27px;
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+/* How to Use */
+.how-to-use {
+  color: #075985;
+  font-size: 80px;
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+/* Steps */
+.steps {
+  color: black;
+  font-size: 45px;
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  word-wrap: break-word;
 }
