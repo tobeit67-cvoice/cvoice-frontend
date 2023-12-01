@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 w-full items-center xl:justify-center h-full p-8">
+    <div className="flex flex-col flex-1 w-full items-center xl:justify-center h-full md:p-8">
       <div className="flex flex-col gap-4 md:gap-6 w-full max-w-6xl pb-10">
         <h1 className="md:text-5xl">ใช้งานง่ายและฟรี!</h1>
         <span className="md:text-lg max-w-sm">
