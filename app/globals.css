@@ -1,57 +1,9 @@
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  h1 {
+    @apply text-4xl font-bold text-[#075985];
   }
-}
-
-body {
-  /* Style for the first set of text */
-  color: #0891B2;
-  font-size: 27px;
-  font-family: 'Roboto Mono';
-  font-weight: 400;
-  word-wrap: break-word;
-
-  /* Style for the second set of text (วิธีใช้งาน) */
-  color: white;
-  font-size: 35px;
-  font-family: 'Roboto Mono';
-  font-weight: 700;
-  word-wrap: break-word;
-
-  /* Style for the third set of text (หน้าหลัก) */
-  color: white;
-  font-size: 35px;
-  font-family: 'Roboto Mono';
-  font-weight: 700;
-  word-wrap: break-word;
-
-  /* Style for the fourth set of text (อัพโหลดไฟล์) */
-  color: white;
-  font-size: 35px;
-  font-family: 'Roboto Mono';
-  font-weight: 700;
-  word-wrap: break-word;
-
-  /* Style for the fifth set of text (ใช้งานง่ายและฟรี !) */
-  color: #075985;
-  font-size: 80px;
-  font-family: 'Roboto Mono';
-  font-weight: 700;
-  word-wrap: break-word;
-
-  /* Style for the sixth set of text (เริ่มต้นใช้งาน) */
-  color: #085984;
-  font-size: 35px;
-  font-family: 'Roboto Mono';
-  font-weight: 400;
-  word-wrap: break-word;
 }
