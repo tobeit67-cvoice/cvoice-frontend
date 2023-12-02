@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "ai": "^2.2.27",
     "axios": "^1.6.2",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.4.1",
+    "swr": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -26,5 +28,10 @@
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "overrides": {
+      "swr": "2.2.0"
+    }
   }
 }
