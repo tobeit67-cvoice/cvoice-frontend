@@ -9,13 +9,20 @@ import {
   SummaryResponse,
   UploadNewButton,
 } from "./components";
+import { APIResponse, S2TResult } from "@/libs/api";
 
 export default function ResultPage() {
   const params = useSearchParams();
   const id = params.get("id");
-  const { data: response, mutate } = useSWR(id ? `/speech/${id}/status` : null);
+  const { data: response, mutate } = useSWR<APIResponse<S2TResult>>(
+    id ? `/speech/${id}/status` : null
+  );
   useEffect(() => {
-    if (response && response.data.status === "pending") {
+    if (
+      response &&
+      response.data?.status !== "done" &&
+      response.data?.status !== "error"
+    ) {
       setTimeout(() => {
         mutate();
       }, 3000);

@@ -1,7 +1,6 @@
 "use client";
 
-import { api } from "@/libs/api";
-import { prettyAxios, sleep } from "@/utils/promise";
+import { APIResponse, S2TResult, api } from "@/libs/api";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
@@ -23,25 +22,24 @@ export default function UploadPage() {
 
       form.append("file", files[0], files[0].name);
       try {
-        const upload = await prettyAxios(api.post("/speech/upload", form));
-
-        if (upload.data.data.status === "done") {
-          mutate(
-            `/speech/${upload.data.data.id}/status`,
-            upload.data.data.content,
-            {
-              revalidate: false,
-            }
-          );
-          return router.push(`/result?id=${upload.data.data.id}`);
+        const { data } = await api.post<APIResponse<S2TResult>>(
+          "/speech/upload",
+          form
+        );
+        if (!data.data) throw new Error("การส่งคำขอผิดพลาด");
+        const { id, content } = data.data;
+        if (data && data.data && data.data?.status === "done") {
+          await mutate(`/speech/${id}/status`, content, {
+            revalidate: false,
+          });
         }
+        router.push(`/result?id=${id}`);
       } catch (err) {
-        if (isAxiosError(err)) {
-          if (err.response?.data?.message) {
-            toast.error(err.response?.data?.message);
-          } else {
-            toast.error("เกิดข้อผิดพลาดบางอย่าง");
-          }
+        console.error(err);
+        if (isAxiosError(err) && err.response?.data?.message) {
+          toast.error(err.response?.data?.message);
+        } else {
+          toast.error("เกิดข้อผิดพลาดบางอย่าง");
         }
       } finally {
         setLoading(false);

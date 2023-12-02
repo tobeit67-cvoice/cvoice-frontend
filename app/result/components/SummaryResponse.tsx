@@ -9,7 +9,7 @@ export function SummaryResponse({
   content: string;
 }) {
   const isSending = useRef(false);
-  const { completion, complete, error } = useCompletion({
+  const { completion, complete, error, stop } = useCompletion({
     api: `${process.env.NEXT_PUBLIC_API_URL}/speech/${id}/summarize`,
     onError(error) {
       console.error(error);
@@ -27,8 +27,14 @@ export function SummaryResponse({
       complete(content);
     }
   }, [content, complete, completion, error]);
+
+  useEffect(() => {
+    return () => {
+      stop();
+    };
+  }, [stop]);
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 w-full">
       <b>สรุปจากการถอดเสียง:</b>
       <div className="w-full p-4 border-2 border-gray-200 border-dashed rounded-xl">
         <p>{completion}</p>
