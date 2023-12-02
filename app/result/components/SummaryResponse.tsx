@@ -10,7 +10,7 @@ export function SummaryResponse({
 }) {
   const isSending = useRef(false);
   const { completion, complete, error } = useCompletion({
-    api: `http://localhost:3000/speech/${id}/summarize`,
+    api: `${process.env.NEXT_PUBLIC_API_URL}/speech/${id}/summarize`,
     onError(error) {
       console.error(error);
       toast.error("เกิดข้อผิดพลาด");
@@ -27,5 +27,12 @@ export function SummaryResponse({
       complete(content);
     }
   }, [content, complete, completion, error]);
-  return <div>{completion}</div>;
+  return (
+    <div className="flex flex-col gap-2">
+      <b>สรุปจากการถอดเสียง:</b>
+      <div className="w-full p-4 border-2 border-gray-200 border-dashed rounded-xl">
+        <p>{completion}</p>
+      </div>
+    </div>
+  );
 }
